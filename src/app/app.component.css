@@ -1,0 +1,24 @@
+.example-form{
+    display: flex;
+    flex-direction: column;
+}
+.keep-note-container{
+    
+    width: 20vw;
+    margin: auto;
+    margin-top: 10px;
+    background-color:rgb(192, 132, 111);
+}
+.example-card{
+    width: 15vw;
+    margin: auto;
+    margin-top: 10px;
+    background-color: antiquewhite;
+    flex-wrap: wrap;
+}
+.example-card-c{
+    display: flex;
+    padding:20px;
+    flex-wrap: wrap;
+    
+}

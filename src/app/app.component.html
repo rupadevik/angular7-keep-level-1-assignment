@@ -9,11 +9,44 @@
 
 
 
+<mat-expansion-panel class="keep-note-container">
+    <mat-expansion-panel-header>
+        <mat-panel-title>
+            Take a note
+        </mat-panel-title>
+
+    </mat-expansion-panel-header>
+    <mat-panel-description>
+        <div class="example-form">
+            <mat-form-field>
+                <input [(ngModel)]="note.title" matInput placeholder="title">
+            </mat-form-field>
+            <mat-form-field>
+
+                <textarea [(ngModel)]="note.text" matInput placeholder="text"></textarea>
+            </mat-form-field>
+            <mat-action-row>
+                <button (click)="save()" mat-raised-button color="primary">Done</button>
+            </mat-action-row>
+        </div>
+    </mat-panel-description>
+</mat-expansion-panel>
+
+
+
+
 
 
 <!-- Load and display the collection of notes from server as Material Cards with card title set to note title and card content set to note text  -->
-
-
-
-
-
+<div class="example-card-c">
+    <mat-card class="example-card" *ngFor="let n of this.notes">
+        <mat-card-header>
+          <mat-card-title>{{n.title}}</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <p>
+           {{n.text}}
+          </p>
+        </mat-card-content>
+      </mat-card>
+    </div>
